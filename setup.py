@@ -65,6 +65,10 @@ extensions = cythonize(extensions, compiler_directives={'embedsignature': True})
 setup(name="pysimgrid",
       version="1.0.0",
       author="Alexey Nazarenko",
-      packages=["pysimgrid", "pysimgrid.simdag"],
+      packages=[
+        "pysimgrid",
+        "pysimgrid.simdag",
+        "pysimgrid.simdag.algorithms",
+        "pysimgrid.tools"],
       install_requires=['numpy', 'networkx>=2.0'],
       ext_modules=extensions)

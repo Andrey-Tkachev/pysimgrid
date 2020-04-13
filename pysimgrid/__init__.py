@@ -19,6 +19,7 @@
 from . import csimdag
 from . import cplatform
 from . import simdag
+from . import tools
 
 from . import _version
 __version__ = _version.version
