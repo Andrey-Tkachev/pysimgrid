@@ -153,7 +153,7 @@ def compute_weights(graph, mindata, maxdata, ccr, scatter_gather=False):
         edge_size = input_size / num_parents
         for edge in graph.pred[node].values():
             edge["weight"] = edge_size
-        graph.node[node]["weight"] = input_size / ccr
+        graph.nodes[node]["weight"] = input_size / ccr
     if not scatter_gather:
         # root -> x edges are effectively zero
         for edge in graph.succ["root"].values():
